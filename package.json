@@ -1,0 +1,18 @@
+{
+  "name": "govtestprep",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "content/sites/*",
+    "agents/*"
+  ],
+  "scripts": {
+    "dev:web": "echo \"wire app runner later\"",
+    "dev:api": "echo \"wire api runner later\"",
+    "build": "echo \"wire build pipeline later\"",
+    "lint": "echo \"wire lint later\"",
+    "site:new": "echo \"add scripted site generator later\""
+  }
+}
