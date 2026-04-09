@@ -1,0 +1,8 @@
+{
+  "site_id": "example-site",
+  "title": "Example Federal Exam Prep",
+  "exam_type": "sample",
+  "branding": {
+    "primary_color": "#1a73e8"
+  }
+}
