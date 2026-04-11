@@ -44,3 +44,93 @@ While reusing the same core application.
 ---
 
 ## Repository Structure
+
+apps/
+web/ Shared frontend shell
+api/ Shared backend services
+
+packages/
+ui/ Shared reusable UI components
+
+content/
+sites/
+example-site/ Example site config + content
+
+agents/
+content-agent/ Agent workspace for content generation
+
+
+---
+
+## Directory Intent
+
+### apps/web
+Shared frontend application.  
+Future: multi-tenant routing, theming, reusable page templates.
+
+### apps/api
+Shared backend.  
+Future: auth, payments, user progress, question delivery, multi-tenant data model.
+
+### packages/ui
+Shared component library across all sites.
+
+### content/sites
+Where **all site-specific differentiation lives**:
+- config
+- lessons
+- questions
+- landing pages
+- SEO content
+
+### agents
+Where your **AI workforce** lives:
+- content generation
+- QA/validation
+- SEO page generation
+- curriculum planning
+
+---
+
+## How to Add a New Site
+
+The intended pattern:
+
+1. Create a folder:content/sites/<site-id>/
+  
+2. Add:
+- config.json
+- content (questions, lessons, pages)
+
+3. Hook into frontend routing
+
+4. Deploy
+
+👉 No duplication of apps or backend required
+
+---
+
+## Current State
+
+This repo is an early scaffold designed to support:
+
+- platform-first architecture
+- agent-driven content creation
+- scalable multi-site expansion
+
+---
+
+## Near-Term Priorities
+
+1. Define content schema (questions, lessons, exams)
+2. Define site configuration format
+3. Build frontend shell (multi-tenant)
+4. Build backend (tenant-aware)
+5. Build agent pipelines for content generation
+
+---
+
+## Guiding Principle
+
+**Build once at the platform level.  
+Differentiate at the content level.**
